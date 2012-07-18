@@ -17,7 +17,7 @@ If you are building from source you will need to do the following:
 <h2>Setup</h2>
 
 * Download the latest release from the [dist folder](https://github.com/benbahrenburg/benCoding.QuickLook/tree/master/dist)  or you can build it yourself.
-* Install the bencoding.dictionary module. If you need help here is a "How To" [guide](https://wiki.appcelerator.org/display/guides/Configuring+Apps+to+Use+Modules). 
+* Install the bencoding.quicklook module. If you need help here is a "How To" [guide](https://wiki.appcelerator.org/display/guides/Configuring+Apps+to+Use+Modules). 
 * You can now use the module via the commonJS require method, example shown below.
 
 <pre><code>
@@ -39,6 +39,14 @@ Examples coming soon
 <h2>QuickLook Dialog</h2>
 Examples coming soon
 
+<h2>FAQ</h2>
+
+* Is there an Android version?  - Sorry this is an iOS only module. Check the Appcelerator Marketplace for other options.
+
+<h2>Legal Stuff</h2>
+
+Appcelerator is a registered trademark of Appcelerator, Inc. Appcelerator Titanium is a trademark of Appcelerator, Inc.
+
 <h2>Licensing & Support</h2>
 
 This project is licensed under the OSI approved Apache Public License (version 2). For details please see the license associated with each project.
@@ -46,7 +54,7 @@ This project is licensed under the OSI approved Apache Public License (version 2
 Developed by [Ben Bahrenburg](http://bahrenburgs.com) available on twitter [@benCoding](http://twitter.com/benCoding)
 
 <h2>Learn More</h2>
-<hr />
+
 <h3>Twitter</h3>
 
 Please consider following the [@benCoding Twitter](http://www.twitter.com/benCoding) for updates 
