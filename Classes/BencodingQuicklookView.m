@@ -161,6 +161,7 @@
         
     }else
     {
+        NSLog(@"Can't read file path %@", [filePath path]);
         return nil;
     }
     

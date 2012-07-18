@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 0.1
+apiversion: 2
+description: benCoding.QuickLook
+author: benCoding.Com
+license: See included license file
+copyright: Copyright (c) 2012 by benCoding.Com
+
+
+# these should not be edited
+name: quicklook
+moduleid: bencoding.quicklook
+guid: dd0b3580-d441-4b06-be4b-17726b570d2a
+platform: iphone
+minsdk: 1.8.2

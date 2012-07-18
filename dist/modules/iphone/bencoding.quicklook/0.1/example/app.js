@@ -1,30 +1,18 @@
 
+// TODO: write your module tests here
 var quicklook = require('bencoding.quicklook');
 Ti.API.info("module is => " + quicklook);
 
-//Setup our directory tests
-var testDir = Ti.Filesystem.getFile(Ti.Filesystem.applicationDataDirectory,'foo');
-//Make our test directory if it doesn't exist
-if(!testDir.exists()){
-	testDir.createDirectory();
-}
 
-var testFile = Ti.Filesystem.getFile(testDir.nativePath,"test2.pdf");
-//If it doesn't exist in that directory we copy it from our app
-if(!testFile.exists()){
-	var cannedTest = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory,"test2.pdf");
-	 testFile.write(cannedTest.read());
-}
-			
 // open a single window
 var win = Ti.UI.createWindow({
 	backgroundColor:'blue'
 });
 
 var _index = 0;
-var foo = quicklook.createView({
+var foo = quicklook.createTestView({
 			top:10,bottom:40,left:20,right:20,
-			documents:["test.pdf","/TestDir/Remodel.xls",testFile.nativePath]
+			documents:["test.pdf","Remodel.xls"]
 		});
 win.add(foo);
 
@@ -49,3 +37,5 @@ b2.addEventListener('click',function(e){
 });
 
 win.open();
+
+

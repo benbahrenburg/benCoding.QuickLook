@@ -27,14 +27,14 @@
 		24DE9E1111C5FE74003F90F6 /* BencodingQuicklookModuleAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DE9E0F11C5FE74003F90F6 /* BencodingQuicklookModuleAssets.h */; };
 		24DE9E1211C5FE74003F90F6 /* BencodingQuicklookModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE9E1011C5FE74003F90F6 /* BencodingQuicklookModuleAssets.m */; };
 		4365799D15B5BFB4008486EC /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4365799C15B5BFB4008486EC /* QuickLook.framework */; };
-		43E3208D15B5CD0F00177ADD /* BencodingQuicklookTestView.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E3208B15B5CD0F00177ADD /* BencodingQuicklookTestView.h */; };
-		43E3208E15B5CD0F00177ADD /* BencodingQuicklookTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E3208C15B5CD0F00177ADD /* BencodingQuicklookTestView.m */; };
-		43E3209415B5D7FA00177ADD /* BencodingQuicklookTestViewProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E3209215B5D7FA00177ADD /* BencodingQuicklookTestViewProxy.h */; };
-		43E3209515B5D7FA00177ADD /* BencodingQuicklookTestViewProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E3209315B5D7FA00177ADD /* BencodingQuicklookTestViewProxy.m */; };
 		43E320A115B6305700177ADD /* BencodingQuicklookView.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E3209F15B6305700177ADD /* BencodingQuicklookView.h */; };
 		43E320A215B6305700177ADD /* BencodingQuicklookView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E320A015B6305700177ADD /* BencodingQuicklookView.m */; };
 		43E320A515B6306700177ADD /* BencodingQuicklookViewProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E320A315B6306700177ADD /* BencodingQuicklookViewProxy.h */; };
 		43E320A615B6306700177ADD /* BencodingQuicklookViewProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E320A415B6306700177ADD /* BencodingQuicklookViewProxy.m */; };
+		43E320AC15B63D0A00177ADD /* BencodingQuicklookDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E320AA15B63D0A00177ADD /* BencodingQuicklookDialog.h */; };
+		43E320AD15B63D0A00177ADD /* BencodingQuicklookDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E320AB15B63D0A00177ADD /* BencodingQuicklookDialog.m */; };
+		43E320B415B640AB00177ADD /* BCFileViewerDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E320B215B640AB00177ADD /* BCFileViewerDialog.h */; };
+		43E320B515B640AB00177ADD /* BCFileViewerDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E320B315B640AB00177ADD /* BCFileViewerDialog.m */; };
 		AA747D9F0F9514B9006C5449 /* BencodingQuicklook_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* BencodingQuicklook_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -56,14 +56,14 @@
 		24DE9E0F11C5FE74003F90F6 /* BencodingQuicklookModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BencodingQuicklookModuleAssets.h; path = Classes/BencodingQuicklookModuleAssets.h; sourceTree = "<group>"; };
 		24DE9E1011C5FE74003F90F6 /* BencodingQuicklookModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BencodingQuicklookModuleAssets.m; path = Classes/BencodingQuicklookModuleAssets.m; sourceTree = "<group>"; };
 		4365799C15B5BFB4008486EC /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
-		43E3208B15B5CD0F00177ADD /* BencodingQuicklookTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BencodingQuicklookTestView.h; path = Classes/BencodingQuicklookTestView.h; sourceTree = "<group>"; };
-		43E3208C15B5CD0F00177ADD /* BencodingQuicklookTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BencodingQuicklookTestView.m; path = Classes/BencodingQuicklookTestView.m; sourceTree = "<group>"; };
-		43E3209215B5D7FA00177ADD /* BencodingQuicklookTestViewProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BencodingQuicklookTestViewProxy.h; path = Classes/BencodingQuicklookTestViewProxy.h; sourceTree = "<group>"; };
-		43E3209315B5D7FA00177ADD /* BencodingQuicklookTestViewProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BencodingQuicklookTestViewProxy.m; path = Classes/BencodingQuicklookTestViewProxy.m; sourceTree = "<group>"; };
 		43E3209F15B6305700177ADD /* BencodingQuicklookView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BencodingQuicklookView.h; path = Classes/BencodingQuicklookView.h; sourceTree = "<group>"; };
 		43E320A015B6305700177ADD /* BencodingQuicklookView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BencodingQuicklookView.m; path = Classes/BencodingQuicklookView.m; sourceTree = "<group>"; };
 		43E320A315B6306700177ADD /* BencodingQuicklookViewProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BencodingQuicklookViewProxy.h; path = Classes/BencodingQuicklookViewProxy.h; sourceTree = "<group>"; };
 		43E320A415B6306700177ADD /* BencodingQuicklookViewProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BencodingQuicklookViewProxy.m; path = Classes/BencodingQuicklookViewProxy.m; sourceTree = "<group>"; };
+		43E320AA15B63D0A00177ADD /* BencodingQuicklookDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BencodingQuicklookDialog.h; path = Classes/BencodingQuicklookDialog.h; sourceTree = "<group>"; };
+		43E320AB15B63D0A00177ADD /* BencodingQuicklookDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BencodingQuicklookDialog.m; path = Classes/BencodingQuicklookDialog.m; sourceTree = "<group>"; };
+		43E320B215B640AB00177ADD /* BCFileViewerDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BCFileViewerDialog.h; path = Classes/BCFileViewerDialog.h; sourceTree = "<group>"; };
+		43E320B315B640AB00177ADD /* BCFileViewerDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BCFileViewerDialog.m; path = Classes/BCFileViewerDialog.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* BencodingQuicklook_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BencodingQuicklook_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libBencodingQuicklook.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBencodingQuicklook.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,17 +114,17 @@
 			isa = PBXGroup;
 			children = (
 				24DE9E0F11C5FE74003F90F6 /* BencodingQuicklookModuleAssets.h */,
+				43E320AA15B63D0A00177ADD /* BencodingQuicklookDialog.h */,
+				43E320AB15B63D0A00177ADD /* BencodingQuicklookDialog.m */,
 				24DE9E1011C5FE74003F90F6 /* BencodingQuicklookModuleAssets.m */,
 				24DD6CF71134B3F500162E58 /* BencodingQuicklookModule.h */,
 				24DD6CF81134B3F500162E58 /* BencodingQuicklookModule.m */,
-				43E3208B15B5CD0F00177ADD /* BencodingQuicklookTestView.h */,
-				43E3208C15B5CD0F00177ADD /* BencodingQuicklookTestView.m */,
-				43E3209215B5D7FA00177ADD /* BencodingQuicklookTestViewProxy.h */,
-				43E3209315B5D7FA00177ADD /* BencodingQuicklookTestViewProxy.m */,
 				43E3209F15B6305700177ADD /* BencodingQuicklookView.h */,
 				43E320A015B6305700177ADD /* BencodingQuicklookView.m */,
 				43E320A315B6306700177ADD /* BencodingQuicklookViewProxy.h */,
 				43E320A415B6306700177ADD /* BencodingQuicklookViewProxy.m */,
+				43E320B215B640AB00177ADD /* BCFileViewerDialog.h */,
+				43E320B315B640AB00177ADD /* BCFileViewerDialog.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -148,10 +148,10 @@
 				AA747D9F0F9514B9006C5449 /* BencodingQuicklook_Prefix.pch in Headers */,
 				24DD6CF91134B3F500162E58 /* BencodingQuicklookModule.h in Headers */,
 				24DE9E1111C5FE74003F90F6 /* BencodingQuicklookModuleAssets.h in Headers */,
-				43E3208D15B5CD0F00177ADD /* BencodingQuicklookTestView.h in Headers */,
-				43E3209415B5D7FA00177ADD /* BencodingQuicklookTestViewProxy.h in Headers */,
 				43E320A115B6305700177ADD /* BencodingQuicklookView.h in Headers */,
 				43E320A515B6306700177ADD /* BencodingQuicklookViewProxy.h in Headers */,
+				43E320AC15B63D0A00177ADD /* BencodingQuicklookDialog.h in Headers */,
+				43E320B415B640AB00177ADD /* BCFileViewerDialog.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,10 +224,10 @@
 			files = (
 				24DD6CFA1134B3F500162E58 /* BencodingQuicklookModule.m in Sources */,
 				24DE9E1211C5FE74003F90F6 /* BencodingQuicklookModuleAssets.m in Sources */,
-				43E3208E15B5CD0F00177ADD /* BencodingQuicklookTestView.m in Sources */,
-				43E3209515B5D7FA00177ADD /* BencodingQuicklookTestViewProxy.m in Sources */,
 				43E320A215B6305700177ADD /* BencodingQuicklookView.m in Sources */,
 				43E320A615B6306700177ADD /* BencodingQuicklookViewProxy.m in Sources */,
+				43E320AD15B63D0A00177ADD /* BencodingQuicklookDialog.m in Sources */,
+				43E320B515B640AB00177ADD /* BCFileViewerDialog.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
