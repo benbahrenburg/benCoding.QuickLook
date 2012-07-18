@@ -33,10 +33,10 @@ Now we have the module installed and avoid in our project we can start to use th
 For detailed documentation please reference this project's documentation folder.
 A code "How To" example is provided in the app.js located in the project's example folder.
 
-<h2>QuickLook View/h2>
+<h2>QuickLook View</h2>
 Examples coming soon
 
-<h2>QuickLook Dialog/h2>
+<h2>QuickLook Dialog</h2>
 Examples coming soon
 
 <h2>Licensing & Support</h2>
