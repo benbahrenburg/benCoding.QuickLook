@@ -9,9 +9,15 @@
 
 @interface BencodingQuicklookView : TiUIView<QLPreviewControllerDataSource> {
 @private
-    UIView *QLView;
+    //UIView *QLView;
     QLPreviewController *previewController;
     NSMutableArray *previewDocuments;
 }
+//@property(strong, nonatomic) QLPreviewController* previewController;
+-(void) refreshCurrentPreviewItem;
+-(void) reloadData;
+
+-(NSInteger) numberOfPreviewItemsInPreviewController: (QLPreviewController *) controller;
+- (id <QLPreviewItem>) previewController: (QLPreviewController *) controller previewItemAtIndex: (NSInteger) index;
 
 @end

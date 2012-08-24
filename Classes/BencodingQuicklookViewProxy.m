@@ -10,15 +10,18 @@
 
 @implementation BencodingQuicklookViewProxy
 
-NSArray* QLKeySequence;
-
--(NSArray *)keySequence
+-(void)reloadData:(id)args
 {
-	if (QLKeySequence == nil)
-	{
-		QLKeySequence = [[NSArray arrayWithObjects:@"documents",nil] retain];
+    if ([self viewAttached]) {
+        TiThreadPerformOnMainThread(^{[(BencodingQuicklookView*)[self view] reloadData];}, NO);
 	}
-	return QLKeySequence;
+}
+
+-(void)refreshCurrentPreviewItem:(id)args
+{
+    if ([self viewAttached]) {
+        TiThreadPerformOnMainThread(^{[(BencodingQuicklookView*)[self view] refreshCurrentPreviewItem];}, NO);
+	}
 }
 
 @end
