@@ -1,4 +1,4 @@
-
+/*jslint maxerr:1000 */
 var quicklook = require('bencoding.quicklook');
 Ti.API.info("module is => " + quicklook);
 
@@ -17,14 +17,11 @@ if(!testFile.exists()){
 }
 			
 // open a single window
-var win = Ti.UI.createWindow({
-	backgroundColor:'blue'
-});
+var win = Ti.UI.createWindow({ backgroundColor:'blue' });
 
 var _index = 0;
 var foo = quicklook.createView({
-			top:10,bottom:40,left:20,right:20,
-			documents:["test.pdf","/TestDir/Remodel.xls",testFile.nativePath]
+			top:10,bottom:40,left:20,right:20,enableLogging:true
 		});
 win.add(foo);
 
@@ -39,11 +36,20 @@ b1.addEventListener('click',function(e){
 });
 
 var b2 = Titanium.UI.createButton({
-	title:'Go to next', height:40, width:100, bottom:10, right:5
+	title:'Load', height:40, width:80, bottom:10, left:105
 });
 win.add(b2);
-
 b2.addEventListener('click',function(e){
+	foo.documents=["test.pdf","/TestDir/Remodel.xls",testFile.nativePath];
+});
+
+
+var b3 = Titanium.UI.createButton({
+	title:'Go to next', height:40, width:100, bottom:10, right:5
+});
+win.add(b3);
+
+b3.addEventListener('click',function(e){
 	_index++;
 	foo.index=_index;
 });

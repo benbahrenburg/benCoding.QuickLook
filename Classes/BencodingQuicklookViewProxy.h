@@ -7,7 +7,7 @@
 #import "TiViewProxy.h"
 #import "BencodingQuicklookView.h"
 @interface BencodingQuicklookViewProxy : TiViewProxy {
-
+    NSMutableArray* documentsToAdd; 
 }
 
 @end
