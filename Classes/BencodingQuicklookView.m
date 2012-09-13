@@ -6,7 +6,7 @@
  */
 
 #import "BencodingQuicklookView.h"
-
+#import "TiUtils.h"
 @implementation BencodingQuicklookView
 @synthesize previewDocuments;
 
@@ -37,6 +37,31 @@ bool enabledLogMode = NO;
 	RELEASE_TO_NIL(QLView);
     RELEASE_TO_NIL(previewDocuments);
 	[super dealloc];
+}
+
+-(void) broadcastEventItem:(NSString*)eventToCall msg:(NSString*)msg
+{
+    if ([self.proxy _hasListeners:eventToCall]) {
+        NSDictionary *event = [NSDictionary dictionaryWithObjectsAndKeys:
+                               msg,@"message",
+                               nil
+                               ];
+        
+        [self.proxy fireEvent:eventToCall withObject:event];
+    }
+}
+
+-(void) broadcastEventItemWithFile:(NSString*)eventToCall file:(NSString*)file msg:(NSString*)msg
+{
+    if ([self.proxy _hasListeners:eventToCall]) {
+        NSDictionary *event = [NSDictionary dictionaryWithObjectsAndKeys:
+                               msg,@"message",
+                               file,@"file",
+                               nil
+                               ];
+        
+        [self.proxy fireEvent:eventToCall withObject:event];
+    }
 }
 
 -(void)render
@@ -90,6 +115,8 @@ bool enabledLogMode = NO;
         {
             NSLog(@"pushDocuments Count: %d", [previewDocuments count]);
         }
+        [self broadcastEventItem:@"dataChange"
+                             msg:[NSMutableString stringWithFormat:@"%d documents loaded",[previewDocuments count]]];
     }
     
 }
@@ -146,6 +173,8 @@ bool enabledLogMode = NO;
         {
             NSLog(@"setDocuments_ Count: %d", [previewDocuments count]);
         }
+        [self broadcastEventItem:@"dataChange"
+                             msg:[NSMutableString stringWithFormat:@"%d documents loaded",[previewDocuments count]]];
     }
 }
 -(void)setEnableLogging_:(id)value
@@ -176,8 +205,7 @@ bool enabledLogMode = NO;
                 [[self previewController] setCurrentPreviewItemIndex:newIndex];
             }               
         }
-        
-    }    
+    }
 }
 
 
@@ -209,6 +237,9 @@ bool enabledLogMode = NO;
         {
             NSLog(@"documents nil returning 1");
         }
+        
+        [self broadcastEventItem:@"error"
+                             msg:@"Document source is nil"];
         return 1;
     }
     else
@@ -219,6 +250,9 @@ bool enabledLogMode = NO;
             {
                 NSLog(@"documents 0 returning 1");
             }
+            [self broadcastEventItem:@"error"
+                                  msg:@"Document source is empty"];
+            return 1;
         }
         else
         {
@@ -226,6 +260,10 @@ bool enabledLogMode = NO;
             {
                 NSLog(@"returning document count of : %d", [previewDocuments count]);
             }
+
+            [self broadcastEventItem:@"previewItems"
+                                 msg:[NSMutableString stringWithFormat:@"%d items to preview",
+                                      [previewDocuments count]]];
             return [previewDocuments count];
         }
     }
@@ -246,6 +284,8 @@ bool enabledLogMode = NO;
         {
             NSLog(@"No documents provided for display");
         }
+        [self broadcastEventItem:@"error"
+                             msg:@"Document source is nil"];
         return nil;
     }
     if([previewDocuments count]==0)
@@ -254,6 +294,8 @@ bool enabledLogMode = NO;
         {
             NSLog(@"No documents available to display");
         }
+        [self broadcastEventItem:@"error"
+                             msg:@"Document source is empty"];
         return nil;
     }
     if((index<0) || (index>([previewDocuments count]-1)))
@@ -262,6 +304,8 @@ bool enabledLogMode = NO;
         {
             NSLog(@"Index provided not in range");
         }
+        [self broadcastEventItem:@"error"
+                             msg:@"Index provided not in range nil provided instead"];
         return nil;
     }
     
@@ -274,13 +318,24 @@ bool enabledLogMode = NO;
         {
             NSLog(@"Our file path %@", [filePath path]);
         }
+        
+        [self broadcastEventItemWithFile:@"docChanged"
+                             file:[filePath path]
+                             msg:[NSMutableString stringWithFormat:@"Viewing file %@",
+                                  [filePath path]]];
+        
         return [NSURL fileURLWithPath:[filePath path]];
+        
     }else
     {
         if(enabledLogMode)
         {
             NSLog(@"Can't read file path %@", [filePath path]);
         }
+        [self broadcastEventItemWithFile:@"error"
+                             file:[filePath path]
+                             msg:[NSMutableString stringWithFormat:@"Unable to read file at path %@",
+                                  [filePath path]]];
         return nil;
     }
 }
