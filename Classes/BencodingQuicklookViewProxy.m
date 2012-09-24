@@ -26,12 +26,10 @@
 }
 -(void)viewDidAttach
 {
-    NSLog(@"in viewDidAttach");
     
     ENSURE_UI_THREAD_0_ARGS;
     BencodingQuicklookView * ourView = (BencodingQuicklookView *)[self view];
-    
-    //[ourView render];
+
     if(documentsToAdd!=nil)
     {
         [ourView pushDocuments:documentsToAdd];
@@ -45,14 +43,14 @@
 {
     ENSURE_TYPE(args,NSArray)
 
-    NSLog(@"setDocuments Proxy");
+    //NSLog(@"setDocuments Proxy");
     
     if(args!=nil)
     {
         BOOL attached = [self viewAttached];
         if (attached)
         {
-            NSLog(@"setDocuments attached YES");
+            //NSLog(@"setDocuments attached YES");
             TiThreadPerformOnMainThread(^{
                 [(BencodingQuicklookView*)[self view] pushDocuments:args];
             }, YES);
@@ -62,9 +60,9 @@
             }
         }
         else {
-            NSLog(@"setDocuments attached NO");
+            //NSLog(@"setDocuments attached NO");
             documentsToAdd = [args mutableCopy];
-            NSLog(@"setDocuments attached NO Count: %d", [documentsToAdd count]);
+            //NSLog(@"setDocuments attached NO Count: %d", [documentsToAdd count]);
         }
     }
 }
